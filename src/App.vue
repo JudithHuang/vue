@@ -1,16 +1,17 @@
 <template>
   <div id="app">
+    <date></date>
     <list-one></list-one>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
+import Date from './components/Date'
 import ListOne from './components/ListOne'
 
 export default {
   components: {
-    Hello,
+    Date,
     ListOne
   }
 }
