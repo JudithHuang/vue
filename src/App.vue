@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <date></date>
+    <tree-view tree-data="data"></tree-view>
     <list-one></list-one>
   </div>
 </template>
@@ -8,11 +9,48 @@
 <script>
 import Date from './components/Date'
 import ListOne from './components/ListOne'
+import TreeView from './components/TreeView'
+
+// demo data
+var data = {
+  name: 'My Tree',
+  children: [
+    { name: 'hello' },
+    { name: 'wat' },
+    {
+      name: 'child folder',
+      children: [
+        {
+          name: 'child folder',
+          children: [
+            { name: 'hello' },
+            { name: 'wat' }
+          ]
+        },
+        { name: 'hello' },
+        { name: 'wat' },
+        {
+          name: 'child folder',
+          children: [
+            { name: 'hello' },
+            { name: 'wat' }
+          ]
+        }
+      ]
+    }
+  ]
+}
 
 export default {
   components: {
     Date,
-    ListOne
+    ListOne,
+    TreeView
+  },
+  data: function() {
+    return {
+      data: data
+    }
   }
 }
 </script>

@@ -3,6 +3,7 @@
 - [docs](https://peachscript.github.io/vue-infinite-loading/#!/spinners)
 - [source](https://github.com/PeachScript/vue-infinite-loading/tree/v1.3.2)
 - 在 ios 和 安卓 企业微信里面，滑动过快会不显示加载更多loading
+- [vue treeview](https://v1.vuejs.org/examples/tree-view.html)
 
 # vue-demo
 
