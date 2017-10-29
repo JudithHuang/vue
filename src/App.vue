@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <date></date>
-    <tree-view tree-data="data"></tree-view>
+    <div class="header">Header</div>
     <list-one></list-one>
+    <div class="footer">Footer</div>
   </div>
 </template>
 
@@ -56,16 +56,11 @@ export default {
 </script>
 
 <style>
-html {
-  height: 100%;
-}
-
 body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  overflow: hidden;
+  margin: 0;
 }
 
 #app {
@@ -73,8 +68,9 @@ body {
   width: 100%;
   font-family: Source Sans Pro, Helvetica, sans-serif;
   text-align: center;
-  height: 100%;
   overflow: hidden;
+  flex-direction: column;
+  height: 100vh;
 }
 
 #app a {
@@ -85,5 +81,14 @@ body {
 .logo {
   width: 100px;
   height: 100px
+}
+
+.content {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+div {
+  display: flex;
 }
 </style>

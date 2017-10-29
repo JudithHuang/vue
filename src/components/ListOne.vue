@@ -78,11 +78,16 @@ export default {
 <style scoped>
 .list-one {
   height: 100%;
+}
+.hacker-news-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.hacker-news-list {
-  font-size: 32px;
-  min-height: 100%;
+.hacker-news-item {
+  width: 100%;
+  justify-content: center;
 }
 </style>
