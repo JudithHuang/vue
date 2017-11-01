@@ -1,18 +1,27 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <button @click="showToast">Show Toast</button>
   </div>
 </template>
 
 <script>
+import Toast from './Toast/index.js'
+import Vue from 'vue'
+
 export default {
   data () {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
       msg: 'Hello World!'
+    }
+  },
+  methods: {
+    showToast () {
+      const options = {
+        position: 'top',
+        size: 'small',
+        message: 'I am a Toast from outer component'
+      }
+      Toast.show(options)
     }
   }
 }
@@ -20,7 +29,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1 {
-  color: #42b983;
+.helle {
+  text-align: cenetr;
 }
 </style>
